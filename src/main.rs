@@ -1,5 +1,6 @@
 mod arrays_hashing;
 mod binary_search;
+mod sliding_window;
 mod stack;
 mod two_pointers;
 
@@ -20,31 +21,6 @@ use binary_search::koko_eating_bananas;
 use binary_search::search_a_2d_matrix;
 use binary_search::time_based_key_value_store;
 
-fn main() {
-    // let nums = vec![2, 7, 11, 15];
-    // let target = 9;
-    // let result = two_sum::two_sum(&nums, target);
-    // println!("{:?}", result);
-    //
-    //
-    // let nums = vec![1, 2, 3, 4];
-    // let result = contains_duplicate::contains_duplicate(&nums);
-    // assert!(!result);
-    // println!("{:?}", result);
-    //
-    //
-    // let nums = vec![1, 1, 1, 2, 2, 3];
-    // let k = 2;
-    // let result = top_k_freq::top_k_frequent(nums, k);
-    // println!("{:?}", result);
-    //
-    // let height = vec![0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
-    // let result = trapping_rain_water::Solution::trap(height);
-    // println!("{:?}", result);
-    // assert_eq!(result, 6);
-    //
+use sliding_window::best_time_to_buy_and_sell_stock;
 
-    // let input: String = String::from("{{{()}()}}");
-    // let result = valid_parenthesis::Solution::is_valid(input);
-    // println!("{:?}", result);
-}
+fn main() {}
