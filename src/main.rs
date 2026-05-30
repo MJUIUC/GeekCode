@@ -1,5 +1,6 @@
 mod arrays_hashing;
 mod binary_search;
+mod linked_list;
 mod sliding_window;
 mod stack;
 mod two_pointers;
