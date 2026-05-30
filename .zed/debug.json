@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Run Tests (debug)",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": {
+      "cargo": {
+        "args": ["test", "--no-run"],
+        "filter": {
+          "kind": "bin"
+        }
+      }
+    },
+    "args": [],
+    "cwd": "."
+  },
+  {
+    "label": "Run Main (debug)",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": {
+      "cargo": {
+        "args": ["build"],
+        "filter": {
+          "kind": "bin"
+        }
+      }
+    },
+    "args": [],
+    "cwd": "."
+  }
+]

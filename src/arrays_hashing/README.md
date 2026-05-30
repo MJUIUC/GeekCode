@@ -184,6 +184,30 @@ for &num in &num_set {
 
 ---
 
+## How to Recognize These Problems
+
+Look for these clues in the problem statement:
+
+| Clue in the problem | Likely pattern |
+|---|---|
+| "Find a pair/two elements that..." | Hash Map for O(1) lookup |
+| "Count", "frequency", "how many times" | Frequency counting |
+| "Duplicates", "unique", "seen before" | HashSet |
+| "Group", "categorize", "anagram" | Canonical form / normalized key |
+| "Product/sum of all except current" | Prefix / running computation |
+| "Consecutive", "sequence", "streak" | Smart starting points + HashSet |
+| "Subarray sum equals k" | Prefix sum + HashMap |
+| O(n) required but brute force is O(n²) | Almost always HashMap or HashSet |
+
+### Red flags that you need hashing
+
+- You're writing a nested loop where the inner loop searches for something → HashMap
+- You're checking "does X exist in the array?" repeatedly → HashSet
+- You're comparing elements pairwise → frequency count or HashMap
+- The constraint says n ≤ 10⁵ and you need better than O(n²) → hash-based approach
+
+---
+
 ## Common Rust Idioms for These Problems
 
 ### Building a HashMap from a loop

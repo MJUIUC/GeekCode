@@ -200,6 +200,31 @@ fn eval_rpn(tokens: Vec<String>) -> i32 {
 
 ---
 
+## How to Recognize These Problems
+
+Look for these clues in the problem statement:
+
+| Clue in the problem | Likely pattern |
+|---|---|
+| "Valid parentheses/brackets" | Matching pairs |
+| "Next greater/smaller element" | Monotonic stack |
+| "Daily temperatures", "stock span" | Monotonic stack |
+| "Evaluate expression" (postfix, RPN) | Expression evaluation |
+| "Min/max in O(1)" alongside push/pop | Auxiliary tracking stack |
+| "Nested structure" (HTML tags, directories) | Matching pairs |
+| "Undo/back" operations | Basic stack (LIFO) |
+
+### Red flags that you need a stack
+
+- You need to match opening/closing pairs
+- You need to find the "next" or "previous" greater/smaller element
+- You're processing things in reverse order of how they arrived
+- The problem involves nested structures of any kind
+- You need to track "most recent" state that can be undone
+- An O(n²) brute force checks every element against all elements to its right/left
+
+---
+
 ## Common Pitfalls
 
 ### Empty stack unwrap panics

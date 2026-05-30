@@ -22,5 +22,8 @@ use binary_search::search_a_2d_matrix;
 use binary_search::time_based_key_value_store;
 
 use sliding_window::best_time_to_buy_and_sell_stock;
+use sliding_window::longest_repeating_character_replacement;
+use sliding_window::longest_substring_without_repeating_characters;
+use sliding_window::permutation_in_string;
 
 fn main() {}

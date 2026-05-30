@@ -171,6 +171,30 @@ while left < right {
 
 ---
 
+## How to Recognize These Problems
+
+Look for these clues in the problem statement:
+
+| Clue in the problem | Likely pattern |
+|---|---|
+| "Sorted array" + "find pair/triplet" | Opposite-end squeeze |
+| "Palindrome" | Opposite-end squeeze (compare from both ends) |
+| "Container/water/area" + "maximize/minimize" | Opposite-end squeeze with running state |
+| "Three elements that..." | Fix one + sweep |
+| "In-place" or O(1) space required | Two pointers instead of extra data structures |
+| "Remove/filter elements" without extra space | Skip/filter in place |
+
+### Red flags that you need two pointers
+
+- The input is sorted (or should be sorted first)
+- You're looking for pairs/triplets that satisfy a condition
+- Brute force would be O(n²) nested loops on a sorted array
+- The problem involves comparing elements from both ends
+- You need to process elements in-place without extra memory
+- The problem mentions "container", "trapping", "area" with a height array
+
+---
+
 ## Common Pitfalls
 
 ### `usize` underflow with the right pointer

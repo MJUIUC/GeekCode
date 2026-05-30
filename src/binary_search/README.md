@@ -159,3 +159,27 @@ If yes, binary search on that threshold.
 - Split Array Largest Sum: "Can we split so max sum ≤ x?" → same pattern
 
 The binary search isn't on the array — it's on the **answer space**.
+
+---
+
+## How to Recognize These Problems
+
+Look for these clues in the problem statement:
+
+| Clue in the problem | Likely pattern |
+|---|---|
+| "Sorted array" + "find target" | Exact match binary search |
+| "Minimum value that satisfies..." | Lower bound |
+| "Maximum value that satisfies..." | Upper bound |
+| "Rotated sorted array" | Binary search with sorted-half detection |
+| "O(log n) required" | Almost always binary search |
+| "Minimum speed/capacity/rate to finish in time" | Binary search on the answer space |
+| "Find the peak/valley/turning point" | Binary search on slope direction |
+
+### Red flags that you need binary search
+
+- The input is sorted or can be treated as sorted
+- You need O(log n) — the problem says so or n ≤ 10⁹ (too big for O(n))
+- You're searching for a threshold where a condition flips from false to true
+- The brute force is "try every possible value of X" where X has a huge range
+- You can answer "is X valid?" efficiently, and validity is monotonic (all valid above/below a point)
