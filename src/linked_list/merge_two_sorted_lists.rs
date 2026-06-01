@@ -15,12 +15,13 @@ impl Solution {
 
         // infinite loop
         loop {
-            // match on some as a reference, Option<&Box<ListNode>>
+            // match on nodes as a reference, Option<&Box<ListNode>>
             match (p1.as_ref(), p2.as_ref()) {
                 // p1_ref == &Box<ListNode>
                 (Some(p1_ref), Some(p2_ref)) => {
-                    // which allows this dereference and comparison
+                    // which allows this value comparison
                     if p1_ref.val > p2_ref.val {
+                        // and we can still work with p1 and p2
                         cur.next = p2.take();
                         cur = cur.next.as_mut().unwrap();
                         p2 = cur.next.take();
