@@ -27,4 +27,6 @@ use sliding_window::longest_repeating_character_replacement;
 use sliding_window::longest_substring_without_repeating_characters;
 use sliding_window::permutation_in_string;
 
+use linked_list::reverse_linked_list;
+
 fn main() {}
