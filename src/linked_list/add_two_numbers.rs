@@ -99,63 +99,63 @@ mod tests {
 
     #[test]
     fn basic_test_1() {
-        let l1 = vec_to_linked_list(vec![2, 4, 3]);
-        let l2 = vec_to_linked_list(vec![5, 6, 4]);
+        let l1 = vec_to_single_linked_list(vec![2, 4, 3]);
+        let l2 = vec_to_single_linked_list(vec![5, 6, 4]);
 
         let answer = Solution::add_two_numbers(l1, l2);
 
-        assert_eq!(answer, vec_to_linked_list(vec![7, 0, 8]));
+        assert_eq!(answer, vec_to_single_linked_list(vec![7, 0, 8]));
     }
 
     #[test]
     fn basic_test_2() {
-        let l1 = vec_to_linked_list(vec![9, 2, 8]);
-        let l2 = vec_to_linked_list(vec![6, 6, 4]);
+        let l1 = vec_to_single_linked_list(vec![9, 2, 8]);
+        let l2 = vec_to_single_linked_list(vec![6, 6, 4]);
 
         let answer = Solution::add_two_numbers(l1, l2);
 
-        assert_eq!(answer, vec_to_linked_list(vec![5, 9, 2, 1]));
+        assert_eq!(answer, vec_to_single_linked_list(vec![5, 9, 2, 1]));
     }
 
     #[test]
     fn basic_test_3() {
-        let l1 = vec_to_linked_list(vec![9, 2, 8]);
+        let l1 = vec_to_single_linked_list(vec![9, 2, 8]);
         let l2 = None;
 
         let answer = Solution::add_two_numbers(l1, l2);
 
-        assert_eq!(answer, vec_to_linked_list(vec![9, 2, 8]));
+        assert_eq!(answer, vec_to_single_linked_list(vec![9, 2, 8]));
     }
 
     // OPT function
 
     #[test]
     fn basic_test_1_opt() {
-        let l1 = vec_to_linked_list(vec![2, 4, 3]);
-        let l2 = vec_to_linked_list(vec![5, 6, 4]);
+        let l1 = vec_to_single_linked_list(vec![2, 4, 3]);
+        let l2 = vec_to_single_linked_list(vec![5, 6, 4]);
 
         let answer = Solution::add_two_numbers_opt(l1, l2);
 
-        assert_eq!(answer, vec_to_linked_list(vec![7, 0, 8]));
+        assert_eq!(answer, vec_to_single_linked_list(vec![7, 0, 8]));
     }
 
     #[test]
     fn basic_test_2_opt() {
-        let l1 = vec_to_linked_list(vec![9, 2, 8]);
-        let l2 = vec_to_linked_list(vec![6, 6, 4]);
+        let l1 = vec_to_single_linked_list(vec![9, 2, 8]);
+        let l2 = vec_to_single_linked_list(vec![6, 6, 4]);
 
         let answer = Solution::add_two_numbers_opt(l1, l2);
 
-        assert_eq!(answer, vec_to_linked_list(vec![5, 9, 2, 1]));
+        assert_eq!(answer, vec_to_single_linked_list(vec![5, 9, 2, 1]));
     }
 
     #[test]
     fn basic_test_3_opt() {
-        let l1 = vec_to_linked_list(vec![9, 2, 8]);
+        let l1 = vec_to_single_linked_list(vec![9, 2, 8]);
         let l2 = None;
 
         let answer = Solution::add_two_numbers_opt(l1, l2);
 
-        assert_eq!(answer, vec_to_linked_list(vec![9, 2, 8]));
+        assert_eq!(answer, vec_to_single_linked_list(vec![9, 2, 8]));
     }
 }

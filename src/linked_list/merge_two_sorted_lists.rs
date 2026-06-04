@@ -44,16 +44,16 @@ impl Solution {
 mod tests {
     use super::*;
 
-    use crate::linked_list::utils::vec_to_linked_list;
+    use crate::linked_list::utils::vec_to_single_linked_list;
 
     #[test]
     fn test_merge_basic() {
         assert_eq!(
             Solution::merge_two_lists(
-                vec_to_linked_list(vec![1, 2, 4]),
-                vec_to_linked_list(vec![1, 3, 4])
+                vec_to_single_linked_list(vec![1, 2, 4]),
+                vec_to_single_linked_list(vec![1, 3, 4])
             ),
-            vec_to_linked_list(vec![1, 1, 2, 3, 4, 4])
+            vec_to_single_linked_list(vec![1, 1, 2, 3, 4, 4])
         );
     }
 
@@ -65,8 +65,8 @@ mod tests {
     #[test]
     fn test_merge_one_empty() {
         assert_eq!(
-            Solution::merge_two_lists(None, vec_to_linked_list(vec![1, 2, 3])),
-            vec_to_linked_list(vec![1, 2, 3])
+            Solution::merge_two_lists(None, vec_to_single_linked_list(vec![1, 2, 3])),
+            vec_to_single_linked_list(vec![1, 2, 3])
         );
     }
 }

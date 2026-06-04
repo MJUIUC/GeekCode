@@ -51,22 +51,22 @@ mod tests {
 
     #[test]
     fn test_reorder_even() {
-        let mut list = vec_to_linked_list(vec![1, 2, 3, 4]);
+        let mut list = vec_to_single_linked_list(vec![1, 2, 3, 4]);
         Solution::reorder_list(&mut list);
-        assert_eq!(list, vec_to_linked_list(vec![1, 4, 2, 3]));
+        assert_eq!(list, vec_to_single_linked_list(vec![1, 4, 2, 3]));
     }
 
     #[test]
     fn test_reorder_odd() {
-        let mut list = vec_to_linked_list(vec![1, 2, 3, 4, 5]);
+        let mut list = vec_to_single_linked_list(vec![1, 2, 3, 4, 5]);
         Solution::reorder_list(&mut list);
-        assert_eq!(list, vec_to_linked_list(vec![1, 5, 2, 4, 3]));
+        assert_eq!(list, vec_to_single_linked_list(vec![1, 5, 2, 4, 3]));
     }
 
     #[test]
     fn test_reorder_single() {
-        let mut list = vec_to_linked_list(vec![1]);
+        let mut list = vec_to_single_linked_list(vec![1]);
         Solution::reorder_list(&mut list);
-        assert_eq!(list, vec_to_linked_list(vec![1]));
+        assert_eq!(list, vec_to_single_linked_list(vec![1]));
     }
 }

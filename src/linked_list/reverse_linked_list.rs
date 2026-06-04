@@ -21,21 +21,21 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::linked_list::utils::vec_to_linked_list;
+    use crate::linked_list::utils::vec_to_single_linked_list;
 
     #[test]
     fn test_reverse_multiple() {
         assert_eq!(
-            Solution::reverse_list(vec_to_linked_list(vec![1, 2, 3, 4, 5])),
-            vec_to_linked_list(vec![5, 4, 3, 2, 1])
+            Solution::reverse_list(vec_to_single_linked_list(vec![1, 2, 3, 4, 5])),
+            vec_to_single_linked_list(vec![5, 4, 3, 2, 1])
         );
     }
 
     #[test]
     fn test_reverse_single() {
         assert_eq!(
-            Solution::reverse_list(vec_to_linked_list(vec![1])),
-            vec_to_linked_list(vec![1])
+            Solution::reverse_list(vec_to_single_linked_list(vec![1])),
+            vec_to_single_linked_list(vec![1])
         );
     }
 

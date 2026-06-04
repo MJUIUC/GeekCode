@@ -45,8 +45,8 @@ mod tests {
 
     #[test]
     fn basic_test_1() {
-        let list = vec_to_linked_list(vec![1, 2, 3, 4, 5]);
+        let list = vec_to_single_linked_list(vec![1, 2, 3, 4, 5]);
         let answer = Solution::remove_nth_from_end(list, 2 as i32);
-        assert_eq!(answer, vec_to_linked_list(vec![1, 2, 3, 5]));
+        assert_eq!(answer, vec_to_single_linked_list(vec![1, 2, 3, 5]));
     }
 }
