@@ -3,6 +3,7 @@ mod binary_search;
 mod linked_list;
 mod sliding_window;
 mod stack;
+mod trees;
 mod two_pointers;
 
 use arrays_hashing::contains_duplicate;
