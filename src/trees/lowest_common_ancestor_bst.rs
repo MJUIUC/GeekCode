@@ -4,7 +4,7 @@ use std::rc::Rc;
 
 struct Solution {}
 impl Solution {
-    pub fn lowest_common_ancestor(
+    pub fn lowest_common_ancestor_bst(
         root: Option<Rc<RefCell<TreeNode>>>,
         p: Option<Rc<RefCell<TreeNode>>>,
         q: Option<Rc<RefCell<TreeNode>>>,
@@ -19,13 +19,13 @@ impl Solution {
             let q_val = q_data.val;
 
             if r_val < p_val && r_val < q_val {
-                return Self::lowest_common_ancestor(
+                return Self::lowest_common_ancestor_bst(
                     r_data.right.clone(),
                     Some(p.clone()),
                     Some(q.clone()),
                 );
             } else if r_val > p_val && r_val > q_val {
-                return Self::lowest_common_ancestor(
+                return Self::lowest_common_ancestor_bst(
                     r_data.left.clone(),
                     Some(p.clone()),
                     Some(q.clone()),
@@ -96,7 +96,7 @@ mod tests {
         let p = Some(Rc::new(RefCell::new(TreeNode::new(2 as i32))));
         let q = Some(Rc::new(RefCell::new(TreeNode::new(8 as i32))));
 
-        let result = Solution::lowest_common_ancestor(root, p, q);
+        let result = Solution::lowest_common_ancestor_bst(root, p, q);
         assert_eq!(6, result.unwrap().borrow().val)
     }
 
