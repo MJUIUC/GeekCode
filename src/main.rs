@@ -4,7 +4,10 @@ mod linked_list;
 mod sliding_window;
 mod stack;
 mod trees;
+mod tries;
 mod two_pointers;
+
+mod mock_interview_questions;
 
 use arrays_hashing::contains_duplicate;
 use arrays_hashing::encode_and_decode_strings;
